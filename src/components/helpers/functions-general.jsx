@@ -1,0 +1,1 @@
+export const baseImgUrl = "http://localhost/React-Intro/public/img/";

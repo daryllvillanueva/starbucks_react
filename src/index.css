@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h2 {
+        @apply text-[clamp(30px,6vw,45px)] font-bold mb-4 
+    }
+
+    h3 {
+        @apply text-[clamp(25px,6vw,25px)] font-bold mb-4 
+    }
+
+    .footer_info {
+        @apply hover:underline text-base font-medium
+    }
+    
+}
+
+@layer components {
+    .container {
+        @apply mx-auto px-4 max-w-[1400px] w-full
+    }
+
+    .btn {
+        @apply bg-transparent min-w-[120px] p-2 text-center rounded-3xl
+    }
+
+    .btn-outline {
+        @apply border border-gray-900
+    }
+
+}
