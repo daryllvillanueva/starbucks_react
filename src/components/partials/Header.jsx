@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './svg/Logo'
+import { BsCart2 } from "react-icons/bs";
 
-const Header = () => {
+const Header = ({setCartShow, cartItem}) => {
+    const handleShowCart = () => setCartShow(true);
   return (
     <div>
         <header className='py-5 border-b border-gray-200 shadow-sm'>
-            <div className='px-10'>
+            <div className='px-10 flex justify-between items-center'>
                 <ul className='flex gap-10 items-center'>
                     <li>
                         <Link to="/home">
@@ -23,6 +25,12 @@ const Header = () => {
                         <Link to="/menu" className='font-bold uppercase hover:text-accent'>Gift Cards</Link>
                     </li>
                 </ul>
+                {cartItem !== undefined && (<button className='text-2xl relative' onClick={handleShowCart} >
+                       {cartItem.length !== 0 && (
+                       <span className='size-4 rounded-full bg-red-600 text-white absolute -top-1 -left-[5px] text-[10px] grid place-content-center'>{cartItem.length}</span>
+                        )} 
+                    <BsCart2/>
+                </button>)}
             </div>
         </header>
     </div>

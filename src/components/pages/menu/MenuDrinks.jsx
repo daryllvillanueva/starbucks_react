@@ -4,7 +4,7 @@ import { baseImgUrl } from '../../helpers/functions-general'
 
 const MenuDrinks = ({setModalShow, setSubItem}) => { // the setSubItem is the setter which will get from the menu. two parameter the setmodalshow and set subitem 
   const handleShowModal = (item) => { // after click, iloload the subItem. the handleShowModal have parameter to 
-    setSubItem(item.subItem) // get the data using the item.subItem
+    setSubItem(item) // get the data using the item.subItem
     setModalShow(true);
   }
   return (

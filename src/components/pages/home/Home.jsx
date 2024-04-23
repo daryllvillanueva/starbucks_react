@@ -5,9 +5,10 @@ import { data } from './data'
 import Footer from '../../partials/footer/Footer'
 
 const Home = () => {
+  
   return (
     <div>
-      <Header/>
+      <Header />
       <div className='max-w-[1500px] w-full mx-auto px-4 py-8'>
         {data.map((item, key)=><HomeCards item={item} key={key}/>)}
         
